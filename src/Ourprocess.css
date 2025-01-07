@@ -1,0 +1,27 @@
+.title{
+    text-align: center;
+    margin-top: -20px;
+}
+
+.our-process{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 65%;
+    margin-left: 250px;
+}
+
+.stepimg{
+    width: 100px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+
+.our-process p{
+    width: 300px;
+    text-align: justify;
+}

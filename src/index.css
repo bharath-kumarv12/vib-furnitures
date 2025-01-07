@@ -1,0 +1,563 @@
+html{
+    background: hsla(0, 0%, 100%, 1);
+
+}
+.root{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container{
+    display: flex;
+    min-width:1497px;
+    height:115px;
+    margin-top:-3px;
+    margin-left:-7px;
+    margin-right: -7px;
+    background-color: hsla(0, 0%, 0%, 1);
+} 
+
+.logo{
+    width: 124px;
+    height: 124px;
+    top: -2px;
+    margin-left: 51px;
+    gap: 0px;
+    opacity: 0px;
+}    
+
+.menu{
+    list-style: none;
+    display: flex;
+    margin-top: 50px;
+}
+
+.menu li{
+    padding: 0 15px;
+}
+.menu li a{
+    color: hsla(0, 0%, 100%, 1);
+    text-decoration: none;
+}
+
+.search-icon{
+    margin-left: 380px;
+    margin-right: 40px;
+}
+
+.banner{
+    min-width: 1316px;
+    height: 674px;
+    margin-top: 47px;
+    margin-left: 80px;
+    border-radius: 5px;
+}
+
+.product-category{
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.livingcard, .diningcard, .bedroomcard, .officecard, .storagecard, .studyroom-card{
+    border-radius: 10px;
+    padding: 20px;
+    width: 170px;
+    height: 170px;
+    text-align: center;
+    display: inline-block;
+    background-color: hsla(0, 0%, 83%, 1);
+}
+.livingcard .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.livingcard .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.diningcard .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.diningcard .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.bedroomcard .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.bedroomcard .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.officecard .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.officecard .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.storagecard .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.storagecard .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.studyroom-card .card-image{
+    width: 120px;
+    height: 120px;
+    margin-top: 50px;
+}
+.studyroom-card .card-title{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    margin:0%
+}
+
+.segments-title{
+    max-width: 1420px;
+    height: 45px;
+    margin-top: 25px;
+    padding: 0px 0px 10px 5px; /* T R B L */
+    margin-left: 27px;
+    background-color: hsla(0, 0%, 83%, 1);
+    border-radius: 5px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.em;
+    display: flex;
+}
+
+.segments-logo{
+    margin-right: 10px;
+    margin-top: 16px;
+    size: 1.5em;
+    margin-left: 10px;
+    
+}
+
+.segment-items{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+    font-weight: bold;
+}
+
+.residential {
+    min-width:400px;
+    height:360px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\residential.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+.seg-1{
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 20px;   
+ }
+
+.institutional {
+    min-width:400px;
+    height:360px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\institutional.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+.commercial {
+    min-width:400px;
+    height:360px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\commercial.png');
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    opacity: 0.7;
+}
+
+
+.seg-2{
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 20px;  
+}
+ .seg-3{
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 20px;   
+ } 
+.view-more1{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 200px;
+    height:35px;
+    /*margin: 220px 150px 10px 25px;  /*Top right bottom left*/
+    padding:10px;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left: 100px;
+    border: none;
+    transition: 0.3s;
+}
+
+.view-more2{
+     cursor: pointer;
+     background-color: black;
+     color: white;
+     width: 200px;
+     height:35px;
+     /*margin: 220px 150px 10px 25px;  /*Top right bottom left*/
+     padding:10px;
+     border-radius: 5px;
+     margin-top: 200px;
+     margin-left: 100px;
+     border: none;
+     transition: 0.3s;
+}
+
+.view-more3{
+   cursor: pointer;
+   background-color: black;
+   color: white;
+   width: 200px;
+   height:35px;
+   /*margin: 220px 150px 10px 25px;  /*Top right bottom left*/
+   padding:10px;
+   border-radius: 5px;
+   margin-top: 200px;
+   margin-left: 100px;
+   border: none;
+   transition: 0.3s;
+}
+
+.products-title{
+    max-width: 1420px;
+    height: 45px;
+    margin-top: 25px;
+    padding: 0px 0px 10px 5px; /* T R B L */
+    margin-left: 27px;
+    background-color: hsla(0, 0%, 83%, 1);
+    border-radius: 5px;
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: 1.em;
+    display: flex;
+}
+
+.product-logo{
+    margin-right: 10px;
+    margin-top: 16px;
+    size: 1.5em;
+    margin-left: 10px;
+}
+
+.products-title h3{
+    margin-left:40px;
+    margin-top: -26px;
+}
+
+.products{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.Box1{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\luxurybetset.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+    margin-bottom: 25px;
+
+}
+
+.Box2{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\luxurysofaset.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+}
+
+.Box3{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\luxurydiningtable.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+}
+
+.Box4{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\luxurybetset.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+.Box5{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\elegantcandleset.jpeg') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+
+.Box6{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\elegantsofaset.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+.Box7{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\fruitplatter.png') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+.Box8{
+    width: 300px;
+    height: 260px;
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\elegantcandleset.jpeg') ;
+    background-size: cover;
+    background-position: center;
+    border-radius: 12px;
+    opacity:0.8;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+.luxurybedset, .luxurysofaset, .luxurydiningtable, .elegantcandleset, .elegantsofaset, .fruitplatter{
+    display: flex;
+    margin-top: 190px;
+    padding-left: 5px;
+    padding-top:20px;
+    height:50px;
+    background: hsla(0, 0%, 83%, 1);
+    border-radius: 10px;
+}
+
+.interior-designing{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width:100%;
+    height:800px;
+    background: hsla(0, 0%, 83%, 1);
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.interior-designing h2{
+    text-align: center;
+}
+.interior-designing p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 900px;
+    text-align: center;
+    margin-left: 300px;
+}
+.interior{
+    width:900px;
+    height: 500px;   
+    margin-left: 270px;
+    margin-top: 30px;
+}
+
+.know-more{
+    margin-left: 685px;
+    margin-top: 10px;
+    padding: 12px;
+    width: 122px;
+    height: 45px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.aboutus{
+    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+.aboutus-title{
+    text-align: center;
+    padding-top: 15px;
+}
+.aboutus p{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 900px;
+    text-align: center;
+    margin-left: 300px;
+}
+
+.aboutus-content{
+     display: flex;
+     margin-top: 40px;  
+}
+
+.inspired-living{
+    margin-left: 100px;
+    width:293px;
+}
+.inspired-living p{
+    margin-left: 0px;
+    width:293px;
+    text-align: justify;
+}
+
+.exceptional-savings{
+    margin-left: 100px;
+    width:293px;
+}
+.exceptional-savings p{
+    margin-left: 0px;
+    width:293px;
+    text-align: justify;
+}
+
+.easy-shopping{
+    margin-top: 153px;
+    margin-left: -690px;
+    width: 293px;
+    height: auto;
+}
+.easy-shopping p {
+    width:293px;
+    margin-top: 20px;
+    margin-left: 0px;
+    text-align: justify;
+}
+.sustainable-options{
+    margin-top: 150px;
+    margin-left: 100px;
+    width:293px;
+}
+.sustainable-options p{
+    width:293px;
+    margin-left:0px;
+    text-align: justify;
+}
+
+.gallery-section {
+    margin-top: -450px;
+    padding: 8rem;
+    margin-left: 750px;
+}
+
+.gallery-container {
+    display: grid;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px,1fr)); */
+    grid-template-areas:
+    "item1 item2"
+    "item3 item4";
+    gap: 1em;    
+}
+.gallery-item img{
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    min-height: fit-content;
+  } 
+  
+.gallery-item:nth-child(1) {
+    grid-area: item1;
+  }
+  
+.gallery-item:nth-child(2) {
+    grid-area: item2;
+  }
+  
+.gallery-item:nth-child(3) {
+    grid-area: item3;
+  }
+  
+.gallery-item:nth-child(4) {
+    grid-area: item4;
+  } 
+
+.gallery-item1{
+    width: 228px;
+    height: 121px;
+    top: 0px;
+    left: 0px;
+    gap: 0px;
+    opacity: 0px;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+}
+
+.gallery-item2{
+    width: 226px;
+    height: 303px;
+    top: 3425px;
+    left: 1091px;
+    gap: 0px;
+    border-radius: 16px 0px 0px 0px;
+    opacity: 0px;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.25);
+    object-fit:cover;
+}
+
+.gallery-item3{
+    width: 226px;
+    height: 303px;
+    margin-top: -175px;
+    left: 841px;
+    gap: 0px;
+    border-radius: 16px 0px 0px 0px;
+    opacity: 0px;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.25);
+}
+
+.gallery-item4{
+    width: 228px;
+    height: 121px;
+    top: 3747px;
+    left: 1091px;
+    gap: 0px;
+    opacity: 0px;
+    box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
+} 
