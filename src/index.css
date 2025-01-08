@@ -50,6 +50,7 @@ button{
     list-style: none;
     margin: auto;
     padding: 0;
+    font-weight: bold;
   }
   
   .menu-item {
