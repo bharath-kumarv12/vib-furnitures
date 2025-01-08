@@ -1,54 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 html{
     background: hsla(0, 0%, 100%, 1);
 
 }
-.root{
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+body{
+    font-family: 'poppins';
+    /* font-size: 16px; */
 }
 
-.container{
-    display: flex;
-    min-width:1497px;
-    height:115px;
-    margin-top:-3px;
-    margin-left:-7px;
-    margin-right: -7px;
-    background-color: hsla(0, 0%, 0%, 1);
-} 
+h1,h2,h3,h4{
+    font-family: 'poppins';
+    font-weight: bold;
+    /* font-size: 24px; */
+}
 
-.logo{
+button{
+    font-size: 'poppins';
+    /* font-size: 16px; */
+}
+
+.navbar {
+    width: 1452px;
+    height:115px;
+    background-color: black;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    top: -3px;
+    margin-bottom:40px;
+    left: -7px;
+}
+  
+  .navbar-logo {
     width: 124px;
     height: 124px;
     top: -2px;
-    margin-left: 51px;
+    left: 51px;
+    margin-right: 30px;
     gap: 0px;
     opacity: 0px;
-}    
 
-.menu{
-    list-style: none;
+  }
+
+  .menu {
     display: flex;
-    margin-top: 50px;
-}
+    justify-content: space-around;
+    list-style: none;
+    margin: auto;
+    padding: 0;
+  }
+  
+  .menu-item {
+    position: relative;
+    margin-right: 30px;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    text-transform: capitalize;
+  }
 
-.menu li{
-    padding: 0 15px;
-}
-.menu li a{
-    color: hsla(0, 0%, 100%, 1);
-    text-decoration: none;
-}
+.home{
+    margin-top: 3px;
+    margin-right: 37px;
 
-.search-icon{
-    margin-left: 380px;
-    margin-right: 40px;
 }
+  .search-icon{
+    margin-left: 150px;
+    margin-right: 80px;
+  }
+  .menu-item:hover {
+    color: lightgray;
+  }
+  
+  .dropdown-parent {
+    display: flex;
+    align-items: center;
+  }
 
-.banner{
-    min-width: 1316px;
+  .dropdown-arrow {
+    margin-left: 5px;
+    font-size: 12px;
+    color: white;
+  }
+  
+  .dropdown-parent:hover .dropdown-arrow {
+    color: lightgray;
+  }
+
+  .dropdown {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background: hsla(0, 0%, 100%, 1);
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    list-style: none;
+    padding: 10px 0;
+    min-width: 150px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown.show {
+    display: block;
+  }
+  
+  .dropdown-item {
+    margin-top: 0;
+    width: 205px;
+    padding: 10px 15px;
+    color: hsla(0, 0%, 0%, 1);
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f5f5f5;
+  }
+  
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 1400px;
     height: 674px;
     margin-top: 47px;
-    margin-left: 80px;
+    margin: auto;
     border-radius: 5px;
 }
 
@@ -59,88 +140,92 @@ html{
 main{
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content:space-between;
+}
+
+.left-arrow, .right-arrow{
+    margin:auto;
 }
 .livingcard, .diningcard, .bedroomcard, .officecard, .storagecard, .studyroom-card{
     border-radius: 10px;
     padding: 20px;
-    width: 170px;
-    height: 170px;
+    margin: 20px;
+    width: 160px;
+    height: 160px;
     text-align: center;
-    display: inline-block;
+    /* display: inline-block; */
     background-color: hsla(0, 0%, 83%, 1);
 }
 .livingcard .card-image{
     width: 120px;
     height: 120px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .livingcard .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    
     margin:0%
 }
 
 .diningcard .card-image{
     width: 120px;
-    height: 120px;
-    margin-top: 50px;
+    height: 110px;
+    margin-top: 40px;
 }
 .diningcard .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     margin:0%
 }
 
 .bedroomcard .card-image{
     width: 120px;
     height: 120px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .bedroomcard .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     margin:0%
 }
 
 .officecard .card-image{
     width: 120px;
     height: 120px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .officecard .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     margin:0%
 }
 
 .storagecard .card-image{
     width: 120px;
     height: 120px;
-    margin-top: 50px;
+    margin-top: 35px;
 }
 .storagecard .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     margin:0%
 }
 
 .studyroom-card .card-image{
     width: 120px;
     height: 120px;
-    margin-top: 50px;
+    margin-top: 40px;
 }
 .studyroom-card .card-title{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     margin:0%
 }
 
 .segments-title{
-    max-width: 1420px;
+    max-width: 1400px;
     height: 45px;
     margin-top: 25px;
     padding: 0px 0px 10px 5px; /* T R B L */
-    margin-left: 27px;
+    margin-left: 35px;
     background-color: hsla(0, 0%, 83%, 1);
     border-radius: 5px;
     font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.em;
     display: flex;
+}
+
+.segments-title h3{
+    margin-top: 15px;
 }
 
 .segments-logo{
@@ -151,60 +236,53 @@ main{
     
 }
 
-.segment-items{
+.segment-items{ 
     display: flex;
     justify-content: space-around;
     margin-top: 30px;
+    min-width: 1400px;
     font-weight: bold;
+    overflow:visible;
 }
 
-.residential {
+.residential{
+    position: relative;
     min-width:400px;
     height:360px;
+    border-radius: 15px;
+    overflow: hidden;
+    margin-left:-15px;
+  }
+
+  .residential::before{
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width:100%;
+    height:100%;
     background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\residential.png');
     background-size: cover;
     background-position: center;
-    border-radius: 15px;
-    opacity: 0.7;
-}
-.seg-1{
+    opacity: 0.5;
+    z-index:-1;
+
+  }
+
+.seg-1, .seg-2, .seg-3{
     text-align: center;
     margin-left: 0px;
-    padding-top: 20px;   
- }
-
-.institutional {
-    min-width:400px;
-    height:360px;
-    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\institutional.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    opacity: 0.7;
+    padding-top: 20px;
 }
 
-.commercial {
-    min-width:400px;
-    height:360px;
-    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\commercial.png');
-    background-size: cover;
-    background-position: center;
-    border-radius: 15px;
-    opacity: 0.7;
-}
+ .seg-1 h3,  .seg-2 h3,  .seg-3 h3 {
+    margin: 0;
+    font-size: 25px;
+    color: black;
+    z-index: 1;
+  }
 
-
-.seg-2{
-    text-align: center;
-    margin-left: 0px;
-    padding-top: 20px;  
-}
- .seg-3{
-    text-align: center;
-    margin-left: 0px;
-    padding-top: 20px;   
- } 
-.view-more1{
+  .view-more1 {
     cursor: pointer;
     background-color: black;
     color: white;
@@ -219,20 +297,83 @@ main{
     transition: 0.3s;
 }
 
-.view-more2{
-     cursor: pointer;
-     background-color: black;
-     color: white;
-     width: 200px;
-     height:35px;
-     /*margin: 220px 150px 10px 25px;  /*Top right bottom left*/
-     padding:10px;
-     border-radius: 5px;
-     margin-top: 200px;
-     margin-left: 100px;
-     border: none;
-     transition: 0.3s;
+  .view-more1:hover{
+    background-color: #444;
+  }
+
+.institutional {
+    position: relative;
+    min-width:400px;
+    height:360px;
+    border-radius: 15px;
+    overflow: hidden;
 }
+.institutional::before{
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\institutional.png');
+    background-size: cover;
+    background-position: center;
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+    z-index:-1;
+}
+
+.commercial {
+    position: relative;
+    min-width:400px;
+    height:360px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.commercial::before{
+    background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\commercial.png');
+    background-size: cover;
+    background-position: center;
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    opacity: 0.5;
+    z-index:-1;
+}
+
+
+.seg-2{
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 20px;  
+}
+ .seg-3{
+    text-align: center;
+    margin-left: 0px;
+    padding-top: 20px;   
+ } 
+
+
+.view-more2{
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    width: 200px;
+    height:35px;
+    /*margin: 220px 150px 10px 25px;  /*Top right bottom left*/
+    padding:10px;
+    border-radius: 5px;
+    margin-top: 200px;
+    margin-left: 100px;
+    border: none;
+    transition: 0.3s;
+}
+.view-more2:hover{
+    background-color: #444;
+  }
 
 .view-more3{
    cursor: pointer;
@@ -248,9 +389,12 @@ main{
    border: none;
    transition: 0.3s;
 }
+.view-more3:hover{
+    background-color: #444;
+  }
 
 .products-title{
-    max-width: 1420px;
+    max-width: 1400px;
     height: 45px;
     margin-top: 25px;
     padding: 0px 0px 10px 5px; /* T R B L */
@@ -271,16 +415,18 @@ main{
 
 .products-title h3{
     margin-left:40px;
-    margin-top: -26px;
+    margin-top: -31px;
 }
 
 .products{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    /* margin-top: 30px;
+    margin-bottom: 30px; */
+    margin:30px;
+    max-width: 1400px;
 }
 
 .Box1{
@@ -297,15 +443,42 @@ main{
 }
 
 .Box2{
+    position: relative;
     width: 300px;
     height: 260px;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.Box2::before{
     background-image: url('C:\Users\V BHARATH KUMAR\Desktop\Front end practice\React\my-website\src\assets\luxurysofaset.png') ;
     background-size: cover;
     background-position: center;
-    border-radius: 12px;
-    opacity:0.8;
+    content:'';
+    position: absolute;
+    top:0;
+    bottom: 0;
+    width:100%;
+    height:100%;
+    opacity: 0.7;
+    z-index:-1;
+}
+.enquire button{
+    width:160px;
+    height:40px;
+    background-color: #444;
+    color: white;
+    border-radius: 10px;
+    margin-top: 85px;
+    margin-left: 70px;
 }
 
+.enquire button:hover{
+    background-color: hsl(0, 0%, 1%);
+}
+.box2 text{
+    margin-left: 0;
+}
 .Box3{
     width: 300px;
     height: 260px;
@@ -372,9 +545,18 @@ main{
     box-shadow: 0px 0px 0px 0px hsla(0, 0%, 0%, 0.08);
 }
 
-.luxurybedset, .luxurysofaset, .luxurydiningtable, .elegantcandleset, .elegantsofaset, .fruitplatter{
+.luxurybedset, .luxurydiningtable, .elegantcandleset, .elegantsofaset, .fruitplatter{
     display: flex;
     margin-top: 190px;
+    padding-left: 5px;
+    padding-top:20px;
+    height:50px;
+    background: hsla(0, 0%, 83%, 1);
+    border-radius: 10px;
+}
+.luxurysofaset{
+    display: flex;
+    margin-top: 65px;
     padding-left: 5px;
     padding-top:20px;
     height:50px;
@@ -385,31 +567,48 @@ main{
 .interior-designing{
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 50px;
     width:100%;
-    height:800px;
+    height:850px;
     background: hsla(0, 0%, 83%, 1);
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 .interior-designing h2{
     text-align: center;
+    margin-bottom: 5px;;
 }
 .interior-designing p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     width: 900px;
+    font-size: 15px;
     text-align: center;
-    margin-left: 300px;
 }
-.interior{
-    width:900px;
-    height: 500px;   
-    margin-left: 270px;
-    margin-top: 30px;
+
+.interior img{
+    width:1000px;
+    height: 600px;
+    align-content: center;   
+    /* margin-left: 270px;
+    margin-top: 30px; */
+}
+
+.interior-images{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -630px;
+}
+
+.left-swipe{
+    margin: 180px;
+}
+
+.right-swipe{
+    margin: 180px;
 }
 
 .know-more{
-    margin-left: 685px;
     margin-top: 10px;
     padding: 12px;
     width: 122px;
@@ -420,15 +619,12 @@ main{
     border-radius: 5px;
 }
 
-.aboutus{
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
-}
 .aboutus-title{
     text-align: center;
-    padding-top: 15px;
+    padding-top: 35px;
 }
 .aboutus p{
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16px;
     width: 900px;
     text-align: center;
     margin-left: 300px;

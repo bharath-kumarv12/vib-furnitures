@@ -1,3 +1,4 @@
+import banner from './assets/banner.png';
 import LivingRoomImage from './assets/chair.png';
 import DiningRoomImage from './assets/dining.png';
 import BedRoomImage from './assets/bedroom.png';
@@ -13,10 +14,15 @@ import galleryimage4 from './assets/gallerypic4.png';
 function Homepage(){
     return(
         <div>
-            <img className="banner" src="https://s3-alpha-sig.figma.com/img/be82/a2c1/4b9d9bd6645310d22891a2afe7f19b54?Expires=1736726400&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=PtUiRLHcZSR~U652H1KEolQwXbSSIhKbG38Ive0O5I7XAkE-43cnoj60hbDByABWFXadoHTBe3tGZWyYAf-J7nJ~MX9ooO9lldEL2TFsMSXLECY3VMumgZ6urd6k-1QQjeD5dq~sMiGzUKTvZVGJKzPwMkeJ-yOdBkNX-l1ZJnrkRL6Y1jF8LlRszyILLAt1ydno-eY5~jcnRcTP1Sq~Msr0QKe45bDy9A0gG5P~Me48ftyvYCG99OWoEF65pKXaryfJVvFhWX4pkUkVabwDIsGM4lpZuO~qagkL2z~ECimfLkWLvwFKLyf1VGxvgbCtMT~qK6yM6dso-lOf5FoPjQ__"></img>
+            <img className="banner" src={banner} alt="banner"></img>
             <h2 className="product-category"> Product Categories </h2>
             <main>
             {/* <div className="categories"> */}
+                <div className='left-arrow'>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.07874 7.46974L10.1522 1.39661C10.445 1.1038 10.92 1.1038 11.2128 1.39661L11.9212 2.10505C12.2137 2.39755 12.2141 2.8713 11.9225 3.16442L7.10905 8.00005L11.9222 12.836C12.2141 13.1291 12.2134 13.6029 11.9209 13.8954L11.2125 14.6038C10.9197 14.8966 10.4447 14.8966 10.1519 14.6038L4.07874 8.53036C3.78593 8.23755 3.78593 7.76255 4.07874 7.46974Z" fill="#030303"/>
+                </svg>
+                </div>
 
                 <div className='livingcard'>
                 <h5 className='card-title'> Living Room </h5>
@@ -47,6 +53,12 @@ function Homepage(){
                 <h5 className='card-title'> Study Room </h5>
                 <img className="card-image"src={StudyRoomImage} alt="Study Room"></img> 
                 </div>
+
+                <div className='right-arrow'>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9211 8.53031L5.84786 14.6035C5.55496 14.8964 5.08008 14.8964 4.78721 14.6035L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 7.99997L4.07761 3.16419C3.7859 2.87109 3.78646 2.39719 4.07886 2.10478L4.78721 1.39644C5.08011 1.10353 5.55499 1.10353 5.84786 1.39644L11.9211 7.46966C12.214 7.76253 12.214 8.23741 11.9211 8.53031Z" fill="#030303"/>
+                </svg>
+                </div>
                 
             </main>
             <div className='segments-title'>
@@ -65,11 +77,12 @@ function Homepage(){
             <h3> Segments</h3>
             </div>
             <div className='segment-items'>
+
                 <div className='residential'> 
                 <h3 className='seg-1'> Residential </h3>
                 <button className='view-more1'> View More</button>
                 </div>
-
+                
                 <div className='institutional'> 
                 <h3 className='seg-2'> Institutional </h3>
                 <button className='view-more2'> View More</button>
@@ -100,6 +113,9 @@ function Homepage(){
                 <div className='luxurybedset'> Luxury Bed Set</div>
                 </div>
                 <div className='Box2'> 
+                <div className='enquire'>
+                        <button>Enquire Now</button>
+                    </div>
                 <div className='luxurysofaset'> Luxury Sofa Set</div>
                 </div>
                 <div className='Box3'>
@@ -125,8 +141,22 @@ function Homepage(){
                 <h2> Interior Designing </h2>
                 <p> Kitchen Interior - Let us help you design your kitchen. Leave the worry of mxing and matching furniture behind. Set up your space confidently by purchasing the complete look for a seamless experience.</p>
                 <button className='know-more'> Know More </button>
+            </div>
+            <div className='interior-images'>
                 <br/>
-                <img className="interior" src={Interior} alt="interior"></img>
+                <div className='left-swipe'>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4.07874 7.46968L10.1522 1.39655C10.445 1.10374 10.92 1.10374 11.2128 1.39655L11.9212 2.10499C12.2137 2.39749 12.2141 2.87124 11.9225 3.16436L7.10905 7.99999L11.9222 12.8359C12.2141 13.1291 12.2134 13.6028 11.9209 13.8953L11.2125 14.6037C10.9197 14.8966 10.4447 14.8966 10.1519 14.6037L4.07874 8.5303C3.78593 8.23749 3.78593 7.76249 4.07874 7.46968Z" fill="#030303"/>
+                </svg>
+                </div>
+                <div className="interior" >
+                    <img src={Interior} alt="interior"></img>
+                </div>
+                <div className='right-swipe'>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M11.9211 8.53034L5.84786 14.6036C5.55496 14.8965 5.08008 14.8965 4.78721 14.6036L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 8L4.07761 3.16422C3.7859 2.87112 3.78646 2.39722 4.07886 2.10481L4.78721 1.39647C5.08011 1.10356 5.55499 1.10356 5.84786 1.39647L11.9211 7.46969C12.214 7.76256 12.214 8.23744 11.9211 8.53034Z" fill="#030303"/>
+                </svg>
+                </div>
             </div>
             <div className='aboutus'>
                 <h2 className='aboutus-title'> About Us </h2>
