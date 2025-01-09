@@ -5,19 +5,49 @@ import BedRoomImage from './assets/bedroom.png';
 import OfficeImage from './assets/office.png';
 import StorageImage from './assets/storage.png';
 import StudyRoomImage from './assets/studyroom.png';
-import Interior from './assets/interior.png';
+import Interior1 from './assets/interior1.png';
+import Interior2 from './assets/Interior2.png';
 import galleryimage1 from './assets/gallerypic1.png';
 import galleryimage2 from './assets/gallerypic2.png';
 import galleryimage3 from './assets/gallerypic3.png';
 import galleryimage4 from './assets/gallerypic4.png';
+import React,{useState} from 'react';
 
-function Homepage(){
+const Homepage: React.FC = () =>{
+    
+    const sections = [
+        {
+          title: "Interior Designing",
+          description:
+            "Kitchen Interior - Let us help you design your kitchen. Leave the worry of mixing and matching furniture behind. Set up your space confidently by purchasing the complete look for a seamless experience.",
+          image: Interior1, 
+        },
+        {
+          title: "Living Room Interior",
+          description:
+            "Living Room Interior - Transform your living room into a cozy and stylish retreat with elegant furniture, warm lighting, and thoughtfully curated decor.",
+          image: Interior2,
+        },
+    ];
+    const [currentIndex, setCurrentIndex] = useState(0);
+
+    const handlePrevious = () => {
+        setCurrentIndex((prevIndex) =>
+        prevIndex === 0 ? sections.length - 1 : prevIndex - 1
+        );
+    };
+
+    const handleNext = () => {
+        setCurrentIndex((prevIndex) =>
+        prevIndex === sections.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
     return(
         <div>
             <img className="banner" src={banner} alt="banner"></img>
             <h2 className="product-category"> Product Categories </h2>
             <main>
-            {/* <div className="categories"> */}
                 <div className='left-arrow'>
                 <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4.07874 7.46974L10.1522 1.39661C10.445 1.1038 10.92 1.1038 11.2128 1.39661L11.9212 2.10505C12.2137 2.39755 12.2141 2.8713 11.9225 3.16442L7.10905 8.00005L11.9222 12.836C12.2141 13.1291 12.2134 13.6029 11.9209 13.8954L11.2125 14.6038C10.9197 14.8966 10.4447 14.8966 10.1519 14.6038L4.07874 8.53036C3.78593 8.23755 3.78593 7.76255 4.07874 7.46974Z" fill="#030303"/>
@@ -138,24 +168,30 @@ function Homepage(){
                 </div>
             </div>
             <div className='interior-designing'>
-                <h2> Interior Designing </h2>
-                <p> Kitchen Interior - Let us help you design your kitchen. Leave the worry of mxing and matching furniture behind. Set up your space confidently by purchasing the complete look for a seamless experience.</p>
+                <div className='interior-content'>
+                <h2>{sections[currentIndex].title}</h2>
+                <p>{sections[currentIndex].description}</p>
                 <button className='know-more'> Know More </button>
-            </div>
-            <div className='interior-images'>
-                <br/>
-                <div className='left-swipe'>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.07874 7.46968L10.1522 1.39655C10.445 1.10374 10.92 1.10374 11.2128 1.39655L11.9212 2.10499C12.2137 2.39749 12.2141 2.87124 11.9225 3.16436L7.10905 7.99999L11.9222 12.8359C12.2141 13.1291 12.2134 13.6028 11.9209 13.8953L11.2125 14.6037C10.9197 14.8966 10.4447 14.8966 10.1519 14.6037L4.07874 8.5303C3.78593 8.23749 3.78593 7.76249 4.07874 7.46968Z" fill="#030303"/>
-                </svg>
                 </div>
-                <div className="interior" >
-                    <img src={Interior} alt="interior"></img>
-                </div>
-                <div className='right-swipe'>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9211 8.53034L5.84786 14.6036C5.55496 14.8965 5.08008 14.8965 4.78721 14.6036L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 8L4.07761 3.16422C3.7859 2.87112 3.78646 2.39722 4.07886 2.10481L4.78721 1.39647C5.08011 1.10356 5.55499 1.10356 5.84786 1.39647L11.9211 7.46969C12.214 7.76256 12.214 8.23744 11.9211 8.53034Z" fill="#030303"/>
-                </svg>
+                <div className='interior-images'>
+                    <br/>
+                    <div className='left-swipe'>
+                    <button onClick={handlePrevious}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.07874 7.46968L10.1522 1.39655C10.445 1.10374 10.92 1.10374 11.2128 1.39655L11.9212 2.10499C12.2137 2.39749 12.2141 2.87124 11.9225 3.16436L7.10905 7.99999L11.9222 12.8359C12.2141 13.1291 12.2134 13.6028 11.9209 13.8953L11.2125 14.6037C10.9197 14.8966 10.4447 14.8966 10.1519 14.6037L4.07874 8.5303C3.78593 8.23749 3.78593 7.76249 4.07874 7.46968Z" fill="#030303"/>
+                    </svg></button>
+                    </div>
+                    <div className="interior" >
+                        <img 
+                            src = {sections[currentIndex].image} 
+                            alt={sections[currentIndex].title}>
+                        </img>
+                    </div>
+                    <div className='right-swipe'>
+                    <button onClick={handleNext}><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M11.9211 8.53034L5.84786 14.6036C5.55496 14.8965 5.08008 14.8965 4.78721 14.6036L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 8L4.07761 3.16422C3.7859 2.87112 3.78646 2.39722 4.07886 2.10481L4.78721 1.39647C5.08011 1.10356 5.55499 1.10356 5.84786 1.39647L11.9211 7.46969C12.214 7.76256 12.214 8.23744 11.9211 8.53034Z" fill="#030303"/>
+                    </svg>
+                    </button>
+                    </div>
                 </div>
             </div>
             <div className='aboutus'>
