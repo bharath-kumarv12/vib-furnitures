@@ -5,7 +5,7 @@ import Ourprocess from './ourprocess';
 import Vibrer from './vibrer';
 import Footer from './footer';
 
-function App(){
+const App: React.FC = () =>{
   return(
     <>
     <Navbar/>
