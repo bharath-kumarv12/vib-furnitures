@@ -16,7 +16,8 @@ import galleryimage4 from './assets/gallerypic4.png';
 import React,{useState} from 'react';
 
 const Homepage: React.FC = () =>{
-  // Card data
+    
+    //Card
     const [activeIndex, setActiveIndex] = useState(0);
     const cards = [
         { title: "Living Room", image: LivingRoomImage },
@@ -32,8 +33,6 @@ const Homepage: React.FC = () =>{
     // Maximum number of visible cards
     const visibleCards = 6;
 
-    
-    // Handle next and previous buttons
     const handleNextCards = () => {
         if (activeIndex < cards.length - visibleCards) {
         setActiveIndex(activeIndex + 2); // Slide 2 cards forward
