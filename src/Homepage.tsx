@@ -5,6 +5,8 @@ import BedRoomImage from './assets/bedroom.png';
 import OfficeImage from './assets/office.png';
 import StorageImage from './assets/storage.png';
 import StudyRoomImage from './assets/studyroom.png';
+import OutdoorImage from './assets/outdoor.png';
+import MatressImage from './assets/matress.png';
 import Interior1 from './assets/interior1.png';
 import Interior2 from './assets/Interior2.png';
 import galleryimage1 from './assets/gallerypic1.png';
@@ -14,7 +16,37 @@ import galleryimage4 from './assets/gallerypic4.png';
 import React,{useState} from 'react';
 
 const Homepage: React.FC = () =>{
+  // Card data
+    const [activeIndex, setActiveIndex] = useState(0);
+    const cards = [
+        { title: "Living Room", image: LivingRoomImage },
+        { title: "Dining", image: DiningRoomImage },
+        { title: "Bed Room", image: BedRoomImage },
+        { title: "Office", image: OfficeImage },
+        { title: "Storage", image: StorageImage },
+        { title: "Study Room", image: StudyRoomImage },
+        { title: "Outdoor", image: OutdoorImage },
+        { title: "Matress", image: MatressImage },
+    ];
+
+    // Maximum number of visible cards
+    const visibleCards = 6;
+
     
+    // Handle next and previous buttons
+    const handleNextCards = () => {
+        if (activeIndex < cards.length - visibleCards) {
+        setActiveIndex(activeIndex + 2); // Slide 2 cards forward
+        }
+    };
+
+    const handlePreviousCards = () => {
+        if (activeIndex > 0) {
+        setActiveIndex(activeIndex - 2); // Slide 2 cards backward
+        }
+    };
+
+    // Interior Designing section
     const sections = [
         {
           title: "Interior Designing",
@@ -47,46 +79,63 @@ const Homepage: React.FC = () =>{
         <div>
             <img className="banner" src={banner} alt="banner"></img>
             <h2 className="product-category"> Product Categories </h2>
-            <main>
-                <div className='left-arrow'>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.07874 7.46974L10.1522 1.39661C10.445 1.1038 10.92 1.1038 11.2128 1.39661L11.9212 2.10505C12.2137 2.39755 12.2141 2.8713 11.9225 3.16442L7.10905 8.00005L11.9222 12.836C12.2141 13.1291 12.2134 13.6029 11.9209 13.8954L11.2125 14.6038C10.9197 14.8966 10.4447 14.8966 10.1519 14.6038L4.07874 8.53036C3.78593 8.23755 3.78593 7.76255 4.07874 7.46974Z" fill="#030303"/>
+            <main className='main-container'>
+            <div
+                className={`arrow left-arrow ${
+                    activeIndex === 0 ? "disabled" : ""
+                }`}
+                onClick={handlePreviousCards}
+                >
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M4.07874 7.46974L10.1522 1.39661C10.445 1.1038 10.92 1.1038 11.2128 1.39661L11.9212 2.10505C12.2137 2.39755 12.2141 2.8713 11.9225 3.16442L7.10905 8.00005L11.9222 12.836C12.2141 13.1291 12.2134 13.6029 11.9209 13.8954L11.2125 14.6038C10.9197 14.8966 10.4447 14.8966 10.1519 14.6038L4.07874 8.53036C3.78593 8.23755 3.78593 7.76255 4.07874 7.46974Z"
+                    fill="#030303"
+                    />
                 </svg>
                 </div>
-
-                <div className='livingcard'>
-                <h5 className='card-title'> Living Room </h5>
-                <img className="card-image"src={LivingRoomImage} alt="Living Room"></img>
+                <div className="cards-container">
+                <div
+                    className="cards-wrapper"
+                    style={{
+                    transform: `translateX(-${activeIndex * (100 / visibleCards)}%)`,
+                    }}
+                >
+                    {cards.map((card, index) => (
+                    <div key={index} className="card">
+                        <h5 className="card-title">{card.title}</h5>
+                        <img
+                        className="card-image"
+                        src={card.image}
+                        alt={card.title}
+                        />
+                    </div>
+                    ))}
                 </div>
-                
-                <div className='diningcard'>
-                <h5 className='card-title'> Dining </h5>
-                <img className="card-image"src={DiningRoomImage} alt="Dining"></img>
-                </div>
-
-                <div className='bedroomcard'>
-                <h5 className='card-title'> Bed Room </h5>
-                <img className="card-image"src={BedRoomImage} alt="Bed Room"></img> 
-                </div>
-
-                <div className='officecard'>
-                <h5 className='card-title'> Office </h5>
-                <img className="card-image"src={OfficeImage} alt="Office"></img> 
-                </div>
-                
-                <div className='storagecard'>
-                <h5 className='card-title'> Storage </h5>
-                <img className="card-image"src={StorageImage} alt="Storage"></img> 
                 </div>
 
-                <div className='studyroom-card'>
-                <h5 className='card-title'> Study Room </h5>
-                <img className="card-image"src={StudyRoomImage} alt="Study Room"></img> 
-                </div>
-
-                <div className='right-arrow'>
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M11.9211 8.53031L5.84786 14.6035C5.55496 14.8964 5.08008 14.8964 4.78721 14.6035L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 7.99997L4.07761 3.16419C3.7859 2.87109 3.78646 2.39719 4.07886 2.10478L4.78721 1.39644C5.08011 1.10353 5.55499 1.10353 5.84786 1.39644L11.9211 7.46966C12.214 7.76253 12.214 8.23741 11.9211 8.53031Z" fill="#030303"/>
+                <div
+                className={`arrow right-arrow ${
+                    activeIndex >= cards.length - visibleCards ? "disabled" : ""
+                }`}
+                onClick={handleNextCards}
+                >
+                <svg
+                    width="16"
+                    height="16"
+                    viewBox="0 0 16 16"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                >
+                    <path
+                    d="M11.9211 8.53031L5.84786 14.6035C5.55496 14.8964 5.08008 14.8964 4.78721 14.6035L4.07886 13.8952C3.78646 13.6028 3.7859 13.1289 4.07761 12.8358L8.89077 7.99997L4.07761 3.16419C3.7859 2.87109 3.78646 2.39719 4.07886 2.10478L4.78721 1.39644C5.08011 1.10353 5.55499 1.10353 5.84786 1.39644L11.9211 7.46966C12.214 7.76253 12.214 8.23741 11.9211 8.53031Z"
+                    fill="#030303"
+                    />
                 </svg>
                 </div>
                 
@@ -135,8 +184,15 @@ const Homepage: React.FC = () =>{
                 </clipPath>
                 </defs>
                 </svg>
-                <h3> Trending Products </h3>
                 </div>
+                <h3> Trending Products </h3>
+                <div className='arrows'><svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M4.57874 7.46974L10.6522 1.39661C10.945 1.1038 11.42 1.1038 11.7128 1.39661L12.4212 2.10505C12.7137 2.39755 12.7141 2.8713 12.4225 3.16442L7.60905 8.00005L12.4222 12.836C12.7141 13.1291 12.7134 13.6029 12.4209 13.8954L11.7125 14.6038C11.4197 14.8966 10.9447 14.8966 10.6519 14.6038L4.57874 8.53036C4.28593 8.23755 4.28593 7.76255 4.57874 7.46974Z" fill="#030303"/>
+                </svg>
+                <svg width="17" height="16" viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M12.4211 8.53031L6.34786 14.6035C6.05496 14.8964 5.58008 14.8964 5.28721 14.6035L4.57886 13.8952C4.28646 13.6028 4.2859 13.1289 4.57761 12.8358L9.39077 7.99997L4.57761 3.16419C4.2859 2.87109 4.28646 2.39719 4.57886 2.10478L5.28721 1.39644C5.58011 1.10353 6.05499 1.10353 6.34786 1.39644L12.4211 7.46966C12.714 7.76253 12.714 8.23741 12.4211 8.53031Z" fill="#030303"/>
+                </svg>
+                </div>    
             </div>
             <div className='products'>
                 <div className='Box1'> 

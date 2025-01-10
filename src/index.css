@@ -1,5 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    overflow-x: hidden;
+  }
+/*   
+  .container {
+    max-width: 100%;
+    overflow: hidden;
+  }
+   */
+  /* img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+  } */
+
 html{
     background: hsla(0, 0%, 100%, 1);
 
@@ -21,7 +42,7 @@ button{
 }
 
 .navbar {
-    width: 1452px;
+    width: 100%;
     height:115px;
     background-color: black;
     padding: 10px 20px;
@@ -134,106 +155,110 @@ button{
     border-radius: 5px;
 }
 
-.product-category{
+.product-category {
     text-align: center;
-}
+    font-size: 24px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
 
-main{
+/* Main container */
+.main-container {
+    /* display: flex;
+    align-items: center;*/
+    gap: 10px;
+    position: relative;
     display: flex;
     flex-direction: row;
     justify-content:space-between;
-}
-
-.left-arrow, .right-arrow{
+    align-content: flex-start;
+  }
+  
+  /* Arrows */
+  .arrow {
+    cursor: pointer;
+    z-index: 10;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .arrow.disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  /* Cards container */
+  .cards-container {
+    overflow: hidden;
+    width: 100%;
+    position: relative;
+  }
+  
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 20px;
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  /* Card styles */
+  .card {
+    /* flex: 0 0 calc(100% / 6); */
+    flex-basis: calc(100% / 6);
+    text-align: center;
+    border-radius: 10px;
+    padding: 50px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 200px;
+    height: 198px;
+    background-color: hsla(0, 0%, 83%, 1);
+  }
+  
+  .card-title {
+    font-size: 16px;
+    margin-top: -25px;
+    margin-bottom: 20px;
+  }
+  
+  .card-image {
+    width: 120px;
+    height: 120px;
+    margin-left: -10px;
+  }
+  
+  /* Product category heading */
+ 
+  .left-arrow, .right-arrow{
     margin:auto;
 }
-.livingcard, .diningcard, .bedroomcard, .officecard, .storagecard, .studyroom-card{
-    border-radius: 10px;
-    padding: 20px;
-    margin: 20px;
-    width: 160px;
-    height: 160px;
-    text-align: center;
-    /* display: inline-block; */
-    background-color: hsla(0, 0%, 83%, 1);
-}
-.livingcard .card-image{
-    width: 120px;
-    height: 120px;
-    margin-top: 40px;
-}
-.livingcard .card-title{
-    
-    margin:0%
-}
-
-.diningcard .card-image{
-    width: 120px;
-    height: 110px;
-    margin-top: 40px;
-}
-.diningcard .card-title{
-    margin:0%
-}
-
-.bedroomcard .card-image{
-    width: 120px;
-    height: 120px;
-    margin-top: 40px;
-}
-.bedroomcard .card-title{
-    margin:0%
-}
-
-.officecard .card-image{
-    width: 120px;
-    height: 120px;
-    margin-top: 40px;
-}
-.officecard .card-title{
-    margin:0%
-}
-
-.storagecard .card-image{
-    width: 120px;
-    height: 120px;
-    margin-top: 35px;
-}
-.storagecard .card-title{
-    margin:0%
-}
-
-.studyroom-card .card-image{
-    width: 120px;
-    height: 120px;
-    margin-top: 40px;
-}
-.studyroom-card .card-title{
-    margin:0%
-}
+  
 
 .segments-title{
     max-width: 1400px;
     height: 45px;
     margin-top: 25px;
     padding: 0px 0px 10px 5px; /* T R B L */
-    margin-left: 35px;
+    margin-left: 48px;
     background-color: hsla(0, 0%, 83%, 1);
     border-radius: 5px;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* font-family: Cochin, Georgia, Times, 'Times New Roman', serif; */
     font-size: 1.em;
     display: flex;
 }
 
 .segments-title h3{
-    margin-top: 15px;
+    margin-top: 10px;
 }
 
 .segments-logo{
     margin-right: 10px;
-    margin-top: 16px;
-    size: 1.5em;
+    margin-top: 13px; 
     margin-left: 10px;
+    size: 1.5em;
     
 }
 
@@ -248,11 +273,11 @@ main{
 
 .residential{
     position: relative;
-    min-width:400px;
-    height:360px;
+    min-width:410px;
+    height:370px;
     border-radius: 15px;
     overflow: hidden;
-    margin-left:-15px;
+    margin-left:-5px;
   }
 
   .residential::before{
@@ -304,8 +329,8 @@ main{
 
 .institutional {
     position: relative;
-    min-width:400px;
-    height:360px;
+    min-width:410px;
+    height:370px;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -325,8 +350,8 @@ main{
 
 .commercial {
     position: relative;
-    min-width:400px;
-    height:360px;
+    min-width:410px;
+    height:370px;
     border-radius: 15px;
     overflow: hidden;
 }
@@ -395,39 +420,46 @@ main{
   }
 
 .products-title{
-    max-width: 1400px;
+    max-width: 1405px;
     height: 45px;
     margin-top: 25px;
     padding: 0px 0px 10px 5px; /* T R B L */
-    margin-left: 27px;
+    margin-left: 43px;
     background-color: hsla(0, 0%, 83%, 1);
     border-radius: 5px;
-    font-family: Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 1.em;
     display: flex;
+    flex-direction: row;
+    /* justify-content:;
+    align-content: center; */
 }
 
 .product-logo{
     margin-right: 10px;
-    margin-top: 16px;
-    size: 1.5em;
+    margin-top: 13px; 
     margin-left: 10px;
+    size: 1.5em;
 }
 
 .products-title h3{
-    margin-left:40px;
-    margin-top: -31px;
+    margin-top: 9px;
+}
+
+.arrows{
+    margin-top: 13px;
+    margin-left: 1100px;
 }
 
 .products{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
+    gap:50px;
     /* margin-top: 30px;
     margin-bottom: 30px; */
     margin:30px;
-    max-width: 1400px;
+    max-width: 1500px;
 }
 
 .Box1{
@@ -551,7 +583,7 @@ main{
     margin-top: 190px;
     padding-left: 5px;
     padding-top:20px;
-    height:50px;
+    height:70px;
     background: hsla(0, 0%, 83%, 1);
     border-radius: 10px;
 }
@@ -560,7 +592,7 @@ main{
     margin-top: 65px;
     padding-left: 5px;
     padding-top:20px;
-    height:50px;
+    height:70px;
     background: hsla(0, 0%, 83%, 1);
     border-radius: 10px;
 }
@@ -587,7 +619,7 @@ main{
 
 .interior-content h2{
     text-align: center;
-    margin-bottom: 5px;;
+    margin: 15px 0;
 }
 
 .interior img{
